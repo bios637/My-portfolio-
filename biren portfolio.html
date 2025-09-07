@@ -1,0 +1,285 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biren Kumar Sethi - IT Support Engineer Portfolio</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide-react@latest/dist/lucide-react.js"></script>
+
+    <style>
+        /* Custom styles for the portfolio */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111827; /* Dark blue-gray background */
+            color: #E5E7EB; /* Light gray text */
+        }
+        /* Custom gradient for hero and highlights */
+        .gradient-text {
+            background: linear-gradient(to right, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .section-heading {
+            @apply text-3xl font-bold text-white sm:text-4xl mb-12 text-center;
+        }
+        .section-heading::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(to right, #38bdf8, #818cf8);
+            margin: 8px auto 0;
+            border-radius: 2px;
+        }
+        /* Glassmorphism effect for cards */
+        .glass-card {
+            background: rgba(31, 41, 55, 0.5); /* Semi-transparent dark gray */
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 1rem; /* More rounded corners */
+        }
+        /* Scrollbar styling */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #111827;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4f46e5;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #6366f1;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header & Navigation -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4">
+            <nav class="flex items-center justify-between">
+                <a href="#hero" class="text-2xl font-bold text-white">BKS.</a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="text-gray-300 hover:text-sky-400 transition-colors">About</a>
+                    <a href="#experience" class="text-gray-300 hover:text-sky-400 transition-colors">Experience</a>
+                    <a href="#skills" class="text-gray-300 hover:text-sky-400 transition-colors">Skills</a>
+                    <a href="#contact" class="text-gray-300 hover:text-sky-400 transition-colors">Contact</a>
+                </div>
+                <a href="#contact" class="hidden md:inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-4 rounded-lg transition-transform duration-300 hover:scale-105">
+                    Contact Me
+                </a>
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+                </button>
+            </nav>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800">
+            <a href="#about" class="block text-center py-3 px-4 text-sm text-gray-200 hover:bg-gray-700">About</a>
+            <a href="#experience" class="block text-center py-3 px-4 text-sm text-gray-200 hover:bg-gray-700">Experience</a>
+            <a href="#skills" class="block text-center py-3 px-4 text-sm text-gray-200 hover:bg-gray-700">Skills</a>
+            <a href="#contact" class="block text-center py-3 px-4 text-sm text-gray-200 hover:bg-gray-700">Contact</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6">
+
+        <!-- Hero Section -->
+        <section id="hero" class="min-h-screen flex items-center justify-center text-center">
+            <div class="max-w-4xl">
+                <span class="text-sky-400 font-semibold">Hi, my name is</span>
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white mt-2 mb-4">Biren Kumar Sethi.</h1>
+                <h2 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-gray-400">I am an IT Support Engineer.</h2>
+                <p class="text-lg md:text-xl max-w-2xl mx-auto mt-6 text-gray-300">
+                    With over 3 years of experience, I specialize in IT service, implementation, and application support. I am passionate about troubleshooting complex issues and ensuring smooth IT operations.
+                </p>
+                <div class="mt-8 flex justify-center gap-4">
+                    <a href="#experience" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition-transform duration-300 hover:scale-105">
+                        View My Experience
+                    </a>
+                    <a href="Biren_resume_IT_support.pdf" target="_blank" class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-3 px-6 rounded-lg transition-transform duration-300 hover:scale-105">
+                        View Resume
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 lg:py-32">
+            <h2 class="section-heading">About Me</h2>
+            <div class="grid md:grid-cols-5 gap-10 items-center">
+                <div class="md:col-span-3">
+                    <p class="text-gray-300 mb-4">
+                        Hello! I'm Biren, an IT Support Engineer based in Bhubaneswar, Odisha. My journey in the IT field has equipped me with a strong background in infrastructure management, hardware, and system support.
+                    </p>
+                    <p class="text-gray-300 mb-4">
+                        Currently, as a System Engineer at Tech Mahindra, I am part of the internal IT team, serving as a key point of contact for clients like Amazon. I thrive on tackling challenges, from troubleshooting network and system issues to managing VLAN movements and providing comprehensive technical support for a range of applications.
+                    </p>
+                     <p class="text-gray-300">
+                        Here are a few technologies and platforms I work with regularly:
+                    </p>
+                    <ul class="grid grid-cols-2 gap-x-6 gap-y-2 mt-4 text-gray-400">
+                        <li class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-sky-400 mr-2"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>Active Directory</li>
+                        <li class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-sky-400 mr-2"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>ServiceNow</li>
+                        <li class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-sky-400 mr-2"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>Office 365</li>
+                        <li class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-sky-400 mr-2"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>G-Suite</li>
+                        <li class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-sky-400 mr-2"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>Zscaler</li>
+                        <li class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-sky-400 mr-2"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>Cisco WebEx</li>
+                    </ul>
+                </div>
+                <div class="md:col-span-2">
+                    <div class="relative w-full max-w-xs mx-auto">
+                        <div class="absolute inset-0 bg-gradient-to-r from-sky-500 to-indigo-600 rounded-lg transform -rotate-6"></div>
+                        <img src="https://placehold.co/400x400/111827/FFFFFF?text=Biren" alt="Biren Kumar Sethi" class="relative w-full h-auto rounded-lg shadow-xl">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-20 lg:py-32">
+            <h2 class="section-heading">Professional Experience</h2>
+            <div class="grid md:grid-cols-1 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Experience 1 -->
+                <div class="glass-card group p-6 hover:-translate-y-2 transition-transform duration-300">
+                    <div class="flex justify-between items-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-sky-400"><path d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20Z"/><path d="M12 12a10 10 0 1 0 0-10v10Z"/><path d="m18.36 18.36-4.24-4.24"/></svg>
+                        <div class="text-right">
+                             <h3 class="text-lg font-bold text-white">System Engineer</h3>
+                             <p class="text-sm text-gray-400">Tech Mahindra</p>
+                             <p class="text-xs text-gray-500">Dec 2021 - Present</p>
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-400 text-sm mb-4">As part of the internal IT team, I provide critical support and act as a primary point of contact for clients, projects, and associates.</p>
+                    <div class="flex flex-wrap gap-2 text-xs">
+                        <span class="bg-gray-800 text-sky-300 px-2 py-1 rounded">IT Infrastructure Support</span>
+                        <span class="bg-gray-800 text-sky-300 px-2 py-1 rounded">Network Troubleshooting</span>
+                        <span class="bg-gray-800 text-sky-300 px-2 py-1 rounded">System Support</span>
+                    </div>
+                </div>
+                <!-- Experience 2 -->
+                 <div class="glass-card group p-6 hover:-translate-y-2 transition-transform duration-300">
+                    <div class="flex justify-between items-center mb-4">
+                       <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-sky-400"><path d="M16 22h2a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h2"/><path d="M12 7v10"/><path d="M9 18h6"/><rect width="10" height="4" x="7" y="2"/></svg>
+                        <div class="text-right">
+                             <h3 class="text-lg font-bold text-white">Key Responsibilities</h3>
+                             <p class="text-sm text-gray-400">Client & Application Management</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm mb-4">I provide technical support for a wide range of applications and services, ensuring seamless operation for both on-site and remote associates.</p>
+                    <div class="flex flex-wrap gap-2 text-xs">
+                        <span class="bg-gray-800 text-sky-300 px-2 py-1 rounded">Outlook & Office 365</span>
+                        <span class="bg-gray-800 text-sky-300 px-2 py-1 rounded">VLAN & VPN Support</span>
+                        <span class="bg-gray-800 text-sky-300 px-2 py-1 rounded">Remote WFH Support</span>
+                         <span class="bg-gray-800 text-sky-300 px-2 py-1 rounded">Zscaler</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20 lg:py-32">
+            <h2 class="section-heading">My Skills</h2>
+            <div class="max-w-4xl mx-auto text-center">
+                 <div class="mb-8">
+                    <h3 class="text-xl font-semibold text-sky-400 mb-4">Technical Skills</h3>
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <div class="flex items-center bg-gray-800 p-3 rounded-lg"><span>Active Directory</span></div>
+                        <div class="flex items-center bg-gray-800 p-3 rounded-lg"><span>SCCM</span></div>
+                        <div class="flex items-center bg-gray-800 p-3 rounded-lg"><span>Patch Management</span></div>
+                        <div class="flex items-center bg-gray-800 p-3 rounded-lg"><span>System Deployment</span></div>
+                        <div class="flex items-center bg-gray-800 p-3 rounded-lg"><span>Asset Management</span></div>
+                        <div class="flex items-center bg-gray-800 p-3 rounded-lg"><span>Root Cause Analysis</span></div>
+                    </div>
+                </div>
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold text-sky-400 mb-4">Ticketing & Applications</h3>
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <div class="flex items-center bg-gray-800 p-3 rounded-lg"><span>BMC Remedy</span></div>
+                        <div class="flex items-center bg-gray-800 p-3 rounded-lg"><span>ServiceNow</span></div>
+                        <div class="flex items-center bg-gray-800 p-3 rounded-lg"><span>Cisco WebEx</span></div>
+                        <div class="flex items-center bg-gray-800 p-3 rounded-lg"><span>BitLocker</span></div>
+                        <div class="flex items-center bg-gray-800 p-3 rounded-lg"><span>Outlook Exchange</span></div>
+                        <div class="flex items-center bg-gray-800 p-3 rounded-lg"><span>G-Suite</span></div>
+                    </div>
+                </div>
+                 <div>
+                    <h3 class="text-xl font-semibold text-sky-400 mb-4">Soft Skills</h3>
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <div class="flex items-center bg-gray-800 p-3 rounded-lg"><span>Technical Documentation</span></div>
+                        <div class="flex items-center bg-gray-800 p-3 rounded-lg"><span>First Point of Contact</span></div>
+                        <div class="flex items-center bg-gray-800 p-3 rounded-lg"><span>Fault Finding</span></div>
+                        <div class="flex items-center bg-gray-800 p-3 rounded-lg"><span>Preventive Maintenance</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 lg:py-32 text-center">
+             <h2 class="section-heading">Get In Touch</h2>
+             <div class="max-w-xl mx-auto">
+                <p class="text-gray-400 mb-8">
+                    I am always open to discussing new opportunities or projects. If you have a question or just want to connect, feel free to reach out.
+                </p>
+                <a href="mailto:birensethi297@gmail.com" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-transform duration-300 hover:scale-105">
+                    Say Hello
+                </a>
+             </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-8">
+        <div class="container mx-auto px-6 text-center text-gray-500">
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="https://www.linkedin.com/in/biren-kumar-sethi-1165b0236" target="_blank" class="hover:text-sky-400 transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+            </div>
+            <p>&copy; 2025 Biren Kumar Sethi. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // JS for mobile menu toggle and header background on scroll
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const header = document.getElementById('header');
+        
+        // Toggle mobile menu
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileLinks = mobileMenu.getElementsByTagName('a');
+        for(let link of mobileLinks) {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        }
+        
+        // Add background to header on scroll
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('bg-gray-900', 'shadow-lg');
+            } else {
+                header.classList.remove('bg-gray-900', 'shadow-lg');
+            }
+        });
+    </script>
+</body>
+</html>
+
